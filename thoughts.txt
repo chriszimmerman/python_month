@@ -1,0 +1,6 @@
+May 3
+- kind of a pain to get a 'modern' version of python on OSX
+- also kind of a pain to cast everyting to the same type to get things to play nice
+	ex. for i in range(1,9):
+			print(str(i) + ' times 2 is ' + str(i * 2))
+- I'm sure a lot of what I'm bitching about is coming from 'omg it's different than what I'm used to omg' or because of the fact that my exposure of dynamically typed languages so far has been ruby, elixir, and js, and now I have some expectation of what dynamically typed languages 'should' be.
