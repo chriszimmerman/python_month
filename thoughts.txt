@@ -4,3 +4,10 @@ May 3
 	ex. for i in range(1,9):
 			print(str(i) + ' times 2 is ' + str(i * 2))
 - I'm sure a lot of what I'm bitching about is coming from 'omg it's different than what I'm used to omg' or because of the fact that my exposure of dynamically typed languages so far has been ruby, elixir, and js, and now I have some expectation of what dynamically typed languages 'should' be.
+
+-Having to indent statements (even in the repl!) is a pain in the buns
+
+- There are 'falsy' values like 0
+
+-Things that are 'omg different'
+	-True and False are your boolean values (note the capitalization)
