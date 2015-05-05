@@ -11,3 +11,9 @@ May 3
 
 -Things that are 'omg different'
 	-True and False are your boolean values (note the capitalization)
+
+May 4
+-Mutable types (lists) and immutable types (strings & tuples)
+
+-Lists, tuples, dictionaries
+-pprint() is great for printing lists and such
