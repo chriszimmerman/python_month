@@ -17,3 +17,9 @@ May 4
 
 -Lists, tuples, dictionaries
 -pprint() is great for printing lists and such
+
+May 5
+- triple quote ''' for printing multiline strings
+	-kinda like """ in elixir for doc strings
+-I like python's approach to multiline comments over ruby, I think. Enclosing a multiline comment in triple double quotes is less weird than the =begin and =end
+
