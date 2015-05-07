@@ -23,3 +23,7 @@ May 5
 	-kinda like """ in elixir for doc strings
 -I like python's approach to multiline comments over ruby, I think. Enclosing a multiline comment in triple double quotes is less weird than the =begin and =end
 
+May 6
+- python packages are awesome
+	- pprint, re (for regex), os (for file operations), unittest
+-file utilities are cool
