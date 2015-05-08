@@ -27,3 +27,16 @@ May 6
 - python packages are awesome
 	- pprint, re (for regex), os (for file operations), unittest
 -file utilities are cool
+
+May 8
+	-learning about unittest
+	-test.py -v for verbosity
+	-learned ways of importing modules into other files
+		import test
+		test.Person()
+
+		Or
+
+		from test import Person
+		Person()
+	-Have a passing unit test set up for my sudoku solver :)
