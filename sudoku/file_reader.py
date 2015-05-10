@@ -2,7 +2,7 @@ import pprint
 import os
 from square import Square
 
-class SudokuFileReader:
+class FileReader:
 
     def read_from_file(self, filename):
         filepath = os.getcwd() + '/' + filename
