@@ -1,0 +1,14 @@
+Square DTO
+	DONE -number value, row, column, block
+
+Read file to get text and transform it into sudoku puzzle
+	-read file and get list of lines back
+	-take list of lines and validate input
+	-if valid, transform lines into puzzle
+
+Solve puzzle
+	-First, check if puzzle is already invalid. If invalid, stop
+	-Brute force with backtracking for solving? Or something smarter?
+
+Questions
+	-How to represent a blank square? None? 
