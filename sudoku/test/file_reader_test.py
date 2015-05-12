@@ -13,34 +13,41 @@ class FileReaderTest(unittest.TestCase):
         expected = [
                     [
                         Square(1,1,1,1),
-                        Square(4,1,2,1),
+                        Square(2,1,2,1),
                         Square(3,1,3,2),
-                        Square(2,1,4,2)
+                        Square(4,1,4,2)
                     ],
                     [
-                        Square(3,2,1,1),
-                        Square(2,2,2,1),
+                        Square(2,2,1,1),
+                        Square(3,2,2,1),
                         Square(4,2,3,2),
                         Square(1,2,4,2)
                     ],
                     [
-                        Square(4,2,1,3),
-                        Square(1,2,2,3),
-                        Square(2,2,3,4),
-                        Square(3,2,4,4)
+                        Square(3,3,1,3),
+                        Square(4,3,2,3),
+                        Square(1,3,3,4),
+                        Square(2,3,4,4)
                     ],
                     [
-                        Square(2,2,1,3),
-                        Square(3,2,2,3),
-                        Square(1,2,3,4),
-                        Square(4,2,4,4)
+                        Square(4,4,1,3),
+                        Square(1,4,2,3),
+                        Square(2,4,3,4),
+                        Square(3,4,4,4)
                     ]
                 ]
 
         file_reader = FileReader() 
 
         actual = file_reader.convert_file_lines_to_puzzle(lines_of_file)
-        self.assertEqual(expected, actual)
+
+        for i in range(0,4):
+            for j in range(0,4):
+                self.assertEqual(expected[i][j].number, actual[i][j].number)
+                self.assertEqual(expected[i][j].row, actual[i][j].row)
+                self.assertEqual(expected[i][j].column, actual[i][j].column)
+                self.assertEqual(expected[i][j].block, actual[i][j].block)
+#        self.assertEqual(expected, actual)
 
 if __name__ == '__main__':
     unittest.main()

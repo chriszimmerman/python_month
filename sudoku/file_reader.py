@@ -1,5 +1,6 @@
 import pprint
 import os
+import math
 from square import Square
 
 class FileReader:
@@ -24,7 +25,11 @@ class FileReader:
         for line in lines:
             for i in range(len(line)):
                 number = int(line[i])
-                line[i] = Square(number, lines.index(line) + 1, i + 1, i + 1)
+                line[i] = Square(number, lines.index(line) + 1, i + 1, self.calculate_block(lines.index(line) + 1, i + 1, len(line)))
             squares.append(line)
 
         return squares
+
+    def calculate_block(self, row, column, gridLength):
+        gridLengthSqrt = math.sqrt(float(gridLength))
+        return int(math.floor(float(row - 1) / float(gridLengthSqrt)) * gridLengthSqrt) + math.ceil(float(column) / float(gridLengthSqrt));
