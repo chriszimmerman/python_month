@@ -41,13 +41,12 @@ class FileReaderTest(unittest.TestCase):
 
         actual = file_reader.convert_file_lines_to_puzzle(lines_of_file)
 
-        for i in range(0,4):
-            for j in range(0,4):
+        for i in range(4):
+            for j in range(4):
                 self.assertEqual(expected[i][j].number, actual[i][j].number)
                 self.assertEqual(expected[i][j].row, actual[i][j].row)
                 self.assertEqual(expected[i][j].column, actual[i][j].column)
                 self.assertEqual(expected[i][j].block, actual[i][j].block)
-#        self.assertEqual(expected, actual)
 
 if __name__ == '__main__':
     unittest.main()
