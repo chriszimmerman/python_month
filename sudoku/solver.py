@@ -15,27 +15,17 @@ class Solver():
                 columns[square.column - 1].append(square)
                 blocks[square.block - 1].append(square)
 
-        for row in rows:
-            values_from_squares = map(lambda x: x.number, row)
-            numbers = list(filter(lambda x: x != None, values_from_squares))
-            if self.__duplicate_numbers_in_row(numbers):
-                return False
-
-        for column in columns:
-            values_from_squares = map(lambda x: x.number, column)
-            numbers = list(filter(lambda x: x != None, values_from_squares))
-            if self.__duplicate_numbers_in_row(numbers):
-                return False
-           
-        for block in blocks:
-            values_from_squares = map(lambda x: x.number, block)
-            numbers = list(filter(lambda x: x != None, values_from_squares))
-            if self.__duplicate_numbers_in_row(numbers):
-                return False
-
-        return True 
-    
+        return ( self.__contains_unique_squares(rows)
+            and self.__contains_unique_squares(columns)
+            and self.__contains_unique_squares(blocks))
 
     def __duplicate_numbers_in_row(self, numbers):
         return len(numbers) != len(set(numbers))
 
+    def __contains_unique_squares(self, collections):
+        for collection in collections:
+            values_from_squares = map(lambda x: x.number, collection)
+            numbers = list(filter(lambda x: x != None, values_from_squares))
+            if self.__duplicate_numbers_in_row(numbers):
+                return False
+        return True
