@@ -40,3 +40,15 @@ May 8
 		from test import Person
 		Person()
 	-Have a passing unit test set up for my sudoku solver :)
+
+May 13
+	-has multiple inheritance (mixins) like ruby
+	-doesn't seem to have concept of interfaces or abstract classes
+
+http://stackoverflow.com/questions/19182188/how-to-find-the-length-of-a-filter-object-in-python
+http://robertheaton.com/2014/02/09/pythons-pass-by-object-reference-as-explained-by-philip-k-dick/
+http://stackoverflow.com/questions/5278122/checking-if-all-elements-in-a-list-are-unique
+http://stackoverflow.com/questions/10254594/what-makes-a-user-defined-class-unhashable
+http://stackoverflow.com/questions/961632/converting-integer-to-string-in-python
+https://docs.python.org/2/library/itertools.html
+http://www.python-course.eu/lambda.php
