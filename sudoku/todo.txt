@@ -5,6 +5,7 @@ Read file to get text and transform it into sudoku puzzle
 	DONE - read file and get list of lines back
 	DONE - take list of lines and validate input
 	DONE - if valid, transform lines into puzzle
+	- test file reading with Mocks
 
 Solve puzzle
 	DONE -First, check if puzzle is already invalid. If invalid, stop

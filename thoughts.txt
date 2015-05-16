@@ -53,3 +53,4 @@ http://stackoverflow.com/questions/961632/converting-integer-to-string-in-python
 https://docs.python.org/2/library/itertools.html
 http://www.python-course.eu/lambda.php
 https://docs.python.org/2/tutorial/datastructures.html
+http://www.am.dodea.edu/benning/loyd/studentinfo/documents/sudokukids.pdf
