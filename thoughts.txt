@@ -58,3 +58,12 @@ http://effbot.org/zone/default-values.htm
 http://www.dotnetperls.com/lambda-python
 http://stackoverflow.com/questions/1123000/does-python-have-anonymous-classes
 http://stackoverflow.com/questions/551038/private-implementation-class-in-python
+http://stackoverflow.com/questions/68645/static-class-variables-in-python
+https://docs.python.org/2/tutorial/datastructures.html
+http://stackoverflow.com/questions/930397/getting-the-last-element-of-a-list-in-python
+http://stackoverflow.com/questions/4432208/how-does-work-in-python
+http://stackoverflow.com/questions/4344017/how-can-i-get-the-concatenation-of-two-lists-in-python-without-modifying-either
+https://docs.python.org/2/tutorial/controlflow.html
+http://stackoverflow.com/questions/493386/how-to-print-in-python-without-newline-or-space
+http://stackoverflow.com/questions/7031736/creating-unique-list-of-objects-from-multiple-lists
+http://stackoverflow.com/questions/9619619/python-the-most-effective-way-to-assign-unique-integer-id-to-a-string
