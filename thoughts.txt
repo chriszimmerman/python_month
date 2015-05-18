@@ -54,3 +54,7 @@ https://docs.python.org/2/library/itertools.html
 http://www.python-course.eu/lambda.php
 https://docs.python.org/2/tutorial/datastructures.html
 http://www.am.dodea.edu/benning/loyd/studentinfo/documents/sudokukids.pdf
+http://effbot.org/zone/default-values.htm
+http://www.dotnetperls.com/lambda-python
+http://stackoverflow.com/questions/1123000/does-python-have-anonymous-classes
+http://stackoverflow.com/questions/551038/private-implementation-class-in-python
