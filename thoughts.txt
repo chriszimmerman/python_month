@@ -67,3 +67,5 @@ https://docs.python.org/2/tutorial/controlflow.html
 http://stackoverflow.com/questions/493386/how-to-print-in-python-without-newline-or-space
 http://stackoverflow.com/questions/7031736/creating-unique-list-of-objects-from-multiple-lists
 http://stackoverflow.com/questions/9619619/python-the-most-effective-way-to-assign-unique-integer-id-to-a-string
+http://daringfireball.net/projects/markdown/syntax#philosophy
+http://www.cforcoding.com/2010/01/markdown-and-introduction-to-parsing.html
