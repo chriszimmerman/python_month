@@ -69,3 +69,9 @@ http://stackoverflow.com/questions/7031736/creating-unique-list-of-objects-from-
 http://stackoverflow.com/questions/9619619/python-the-most-effective-way-to-assign-unique-integer-id-to-a-string
 http://daringfireball.net/projects/markdown/syntax#philosophy
 http://www.cforcoding.com/2010/01/markdown-and-introduction-to-parsing.html
+http://stackoverflow.com/questions/742013/how-to-code-a-url-shortener
+http://en.wikipedia.org/wiki/Bijection#Examples
+https://docs.python.org/2/library/sqlite3.html
+https://www.sqlite.org/autoinc.html
+http://stackoverflow.com/questions/9342249/how-to-insert-a-unique-id-into-each-sqlite-row
+http://stackoverflow.com/questions/227459/ascii-value-of-a-character-in-python
