@@ -1,14 +1,3 @@
-import sqlite3
-conn = sqlite3.connect('example.db')
-
-c = conn.cursor()
-
-c.execute("INSERT INTO urls VALUES (NULL, 'http://www.google.com')")
-
-conn.commit()
-
-conn.close()
-
 class URLShortener:
     alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     alphabet_length = len(alphabet)
@@ -51,8 +40,6 @@ class URLShortener:
 
     def __to_decimal(self, digit, digits):
         return digit * self.alphabet_length ** digits.index(digit)
-
-        
 
 #create database - DONE
 #take url and save in db
