@@ -1,3 +1,3 @@
 from url_repository import URLRepository
 repo = URLRepository()
-print(repo.get_row(1))
+repo.insert_row('www.kotaku.com')
