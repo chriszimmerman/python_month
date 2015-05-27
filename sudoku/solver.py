@@ -1,3 +1,4 @@
+import random
 class Solver():
     def is_valid(self, puzzle):
         return self.__check_for_uniqueness(puzzle, lambda x: x != None)
@@ -56,18 +57,24 @@ class Solver():
         while len(squares_to_solve) > 0 or len(backtrack_stack) > 0:
             if take_from_potential_solution and len(potentially_solved_squares) > 0:
                 current_square = potentially_solved_squares.pop()
+                print("taking from potential solution")
             elif len(backtrack_stack) > 0: 
                 current_square = backtrack_stack.pop()
+                print("taking from backtrack stack")
             else:
                 current_square = squares_to_solve.pop()
+                print("taking from squares not tried yet")
 
             if current_square.number == None:
-                current_square.number = 0
+                current_square.number = 1 
+            else:
+                current_square.number = current_square.number % length + 1
 
             for _ in range(length):
                 current_square.number = current_square.number % length + 1
-            
-                if self.is_valid(puzzle): 
+
+                if self.valid(current_square, already_solved_squares) and self.valid(current_square, potentially_solved_squares):
+                    print("valid puzzle")
                     potentially_solved_squares.append(current_square)
                     take_from_potential_solution = False
                     square_tried = True
@@ -76,6 +83,13 @@ class Solver():
             if not square_tried:
                 backtrack_stack.append(current_square)
                 take_from_potential_solution = True 
-                square_tried = False
+                print("putting square back on backtrack stack")
+
+            square_tried = False
 
         return puzzle 
+
+    def valid(self, current_square, squares):
+        return (len(list(filter(lambda square: square.number == current_square.number and square.row == current_square.row, squares))) == 0 
+            and len(list(filter(lambda square: square.number == current_square.number and square.column == current_square.column, squares))) == 0 
+            and len(list(filter(lambda square: square.number == current_square.number and square.block == current_square.block, squares))) == 0)
