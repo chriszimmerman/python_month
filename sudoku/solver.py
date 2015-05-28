@@ -47,45 +47,37 @@ class Solver():
         for row in puzzle:
             for square in row:
                 if square.number == None:
+                    square.number = 1
                     squares_to_solve.append(square)
                 else:
                     already_solved_squares.append(square)
 
         take_from_potential_solution = False
-        square_tried = False
        
         while len(squares_to_solve) > 0 or len(backtrack_stack) > 0:
             if take_from_potential_solution and len(potentially_solved_squares) > 0:
                 current_square = potentially_solved_squares.pop()
-                print("taking from potential solution")
+                current_square.number = current_square.number + 1
             elif len(backtrack_stack) > 0: 
                 current_square = backtrack_stack.pop()
-                print("taking from backtrack stack")
+                current_square.number = 1
             else:
                 current_square = squares_to_solve.pop()
-                print("taking from squares not tried yet")
+                current_square.number = current_square.number + 1
 
-            if current_square.number == None:
-                current_square.number = 1 
-            else:
-                current_square.number = current_square.number % length + 1
-
-            for _ in range(length):
-                current_square.number = current_square.number % length + 1
-
-                if self.valid(current_square, already_solved_squares) and self.valid(current_square, potentially_solved_squares):
-                    print("valid puzzle")
+            square_tried = False
+            while not square_tried:
+                if current_square.number > length:
+                    current_square.number = 1
+                    backtrack_stack.append(current_square)
+                    square_tried = True
+                    take_from_potential_solution = True 
+                elif not self.valid(current_square, already_solved_squares) or not self.valid(current_square, potentially_solved_squares):
+                    current_square.number += 1
+                else:
                     potentially_solved_squares.append(current_square)
                     take_from_potential_solution = False
                     square_tried = True
-                    break
-               
-            if not square_tried:
-                backtrack_stack.append(current_square)
-                take_from_potential_solution = True 
-                print("putting square back on backtrack stack")
-
-            square_tried = False
 
         return puzzle 
 
