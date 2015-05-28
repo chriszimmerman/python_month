@@ -1,4 +1,3 @@
-import random
 class Solver():
     def is_valid(self, puzzle):
         return self.__check_for_uniqueness(puzzle, lambda x: x != None)
@@ -72,7 +71,7 @@ class Solver():
                     backtrack_stack.append(current_square)
                     square_tried = True
                     take_from_potential_solution = True 
-                elif not self.valid(current_square, already_solved_squares) or not self.valid(current_square, potentially_solved_squares):
+                elif not self.__valid(current_square, already_solved_squares) or not self.__valid(current_square, potentially_solved_squares):
                     current_square.number += 1
                 else:
                     potentially_solved_squares.append(current_square)
@@ -81,7 +80,7 @@ class Solver():
 
         return puzzle 
 
-    def valid(self, current_square, squares):
+    def __valid(self, current_square, squares):
         return (len(list(filter(lambda square: square.number == current_square.number and square.row == current_square.row, squares))) == 0 
             and len(list(filter(lambda square: square.number == current_square.number and square.column == current_square.column, squares))) == 0 
             and len(list(filter(lambda square: square.number == current_square.number and square.block == current_square.block, squares))) == 0)
