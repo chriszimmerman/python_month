@@ -1,11 +1,15 @@
+import sys
 from solver import Solver
 from file_reader import FileReader
 
-filename = input('Enter your puzzle file:')
+if len(sys.argv) != 2:
+    print("Please specify a puzzle file to solve.")
+    sys.exit(0)
 
+filename = sys.argv[1]
 file_reader = FileReader()
-file_contents = file_reader.read_from_file(filename)
-puzzle = file_reader.convert_file_lines_to_puzzle(file_contents)
+
+puzzle = file_reader.get_puzzle_from_file(filename)
 
 solver = Solver()
 

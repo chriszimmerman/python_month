@@ -39,7 +39,7 @@ class FileReaderTest(unittest.TestCase):
 
         file_reader = FileReader() 
 
-        actual = file_reader.convert_file_lines_to_puzzle(lines_of_file)
+        actual = file_reader._FileReader__convert_file_lines_to_puzzle(lines_of_file)
 
         for i in range(4):
             for j in range(4):
@@ -84,7 +84,7 @@ class FileReaderTest(unittest.TestCase):
 
         file_reader = FileReader() 
 
-        actual = file_reader.convert_file_lines_to_puzzle(lines_of_file)
+        actual = file_reader._FileReader__convert_file_lines_to_puzzle(lines_of_file)
 
         for i in range(4):
             for j in range(4):
